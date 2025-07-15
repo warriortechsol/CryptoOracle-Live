@@ -23,12 +23,12 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-      
+
       - name: Build Vite project
         run: |
-        export CI=false
+          export CI=false
+          npm run build
 
-    npm run build
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
