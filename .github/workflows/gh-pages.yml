@@ -36,4 +36,5 @@ jobs:
     	  publish_dir: ./dist
     	  user_name: Aaron Dennis
     	  user_email: aaron.dennis@users.noreply.github.com
-  
+    	  verbose: true
+
