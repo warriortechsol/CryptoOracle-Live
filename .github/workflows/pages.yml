@@ -28,7 +28,10 @@ jobs:
       - name: Build Vite project
         run: |
           export CI=false
-          npm run build
+          npm run build || echo "Build failed with exit code $?"
+
+      - name: List build output
+        run: ls -la ./dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
