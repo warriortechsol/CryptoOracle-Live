@@ -9,12 +9,11 @@ export default defineConfig({
     outDir: 'dist',
     emptyOutDir: true,
     rollupOptions: {
-      input: resolve(__dirname, 'index.html') // This tells Vite to start from here
+      input: resolve(__dirname, 'index.html')
     }
   },
   server: {
     port: 3000
   }
 })
-
 
