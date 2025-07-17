@@ -2,7 +2,7 @@ services:
   - type: web
     name: cryptooracle-backend
     env: python
-    plan: free  # change to 'starter' or 'standard' if you want higher performance
+    plan: free
     region: oregon
     branch: main
     rootDir: backend
@@ -12,9 +12,9 @@ services:
 
     envVars:
       - key: OPENAI_API_KEY
-        value: sk-...
+        value: sk-...  # Replace with actual key
 
-      # Add other secrets below as needed
+      # Optional additional env vars:
       # - key: DB_URL
       #   value: postgres://...
 

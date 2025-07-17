@@ -22,7 +22,6 @@ def fetch_coin_data(symbol, retries=3, delay=2):
         print(f"[DEBUG] CoinLore status={response.status_code} (attempt {attempt + 1})")
         print(f"[DEBUG] Raw response:\n{response.text}")
 
-        # ✅ Check for empty or bad response
         if response.status_code != 200 or not response.text.strip():
             print(f"[WARN] Invalid CoinLore response — retrying...")
             time.sleep(delay)
@@ -40,7 +39,6 @@ def fetch_coin_data(symbol, retries=3, delay=2):
 def predict_price(symbol: str, current_price: float):
     try:
         print(f"[DEBUG] predict_price(symbol={symbol}, current_price={current_price})")
-
         coin_data = fetch_coin_data(symbol)
 
         price = float(coin_data.get("price_usd", current_price))
