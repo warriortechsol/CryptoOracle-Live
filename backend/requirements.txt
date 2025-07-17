@@ -1,7 +1,8 @@
 fastapi
 uvicorn
 requests
-pandas==2.2.1
+pandas==2.0.3
 scikit-learn
 python-dotenv
+openai==0.28.0
 
